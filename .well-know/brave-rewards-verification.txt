@@ -1,0 +1,4 @@
+This is a Brave Creators publisher verification file.
+
+Domain: psmartins87.github.io
+Token: 3314b8f3f28d05d9901f44d3f3bb664a3e87b2561a33e5cef64144be70f3b1cf
