@@ -1,241 +1,193 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="styles.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         />
-        <title>Paulo Silvério Martins</title>
+
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css"
+        />
+
+        <link rel="stylesheet" href="styles.css" />
+
+        <title>Paulo Silvério Martins | Desenvolvedor de Software</title>
         <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "tcvr6i0hiy");
-</script>
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "tcvr6i0hiy");
+        </script>
     </head>
     <body>
         <header>
-            <h1>Paulo Silvério Martins</h1>
-            <h2>Desenvolvedor de Software</h2>
+            <nav class="container">
+                <a href="#" class="logo">PSM.</a>
+                <ul class="nav-menu">
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#featured-projects">Projetos</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
         </header>
 
-        <main class="container">
-            <section id="about" class="section">
-                <h3>Sobre Mim</h3>
-                <p>
-                    Me chamo Paulo Silvério Martins, sou um apaixonado por
-                    tecnologia e programação. Minha jornada na área da
-                    computação começou durante o ensino médio, quando tive meu
-                    primeiro contato com programação em um projeto de extensão.
-                    Desde então, venho trabalhando incansavelmente para expandir
-                    meus conhecimentos e habilidades nesse campo.
-                </p>
-                <p>
-                    Minha paixão pela resolução de problemas e pela criação de
-                    soluções me levou a mergulhar em várias linguagens de
-                    programação, frameworks e tecnologias. Tenho experiência em:
-                    C/C++; Python; Java; Julia; Node.js; Ruby on Rails; React e
-                    Angular. Estou sempre em busca de novos desafios e
-                    oportunidades para aprender e crescer.
-                </p>
-                <p>
-                    Além da programação, também sou entusiasta de inteligência
-                    artificial, segurança cibernética e pesquisa operacional.
-                </p>
-            </section>
-
-            <section id="education" class="section">
-                <h3 class="text-center">Educação</h3>
-                <ul class="education-list">
-                    <li>
-                        <strong>Ensino médio</strong><br />
-                        Colégio Estadual Cornélio Pires Ribeiro<br />
-                        <span class="education-date">2012-2018</span>
-                    </li>
-                    <li>
-                        <strong>Ensino Superior - Engenharia Civil</strong
-                        ><br />
-                        Universidade Tecnológica Federal do Paraná (UTFPR)<br />
-                        <span class="education-date"
-                            >2019-2020 (interrompido)</span
-                        >
-                    </li>
-                    <li>
-                        <strong>Ensino Superior - Ciências da Computação</strong
-                        ><br />
-                        Universidade Estadual do Centro-Oeste (UNICENTRO)<br />
-                        <span class="education-date">2020-presente</span>
-                    </li>
-                </ul>
-            </section>
-
-            <section id="skills" class="section">
-                <h3 class="text-center">Hard Skills</h3>
-                <div class="skills-grid">
-                    <div class="skills-column">
-                        <ul class="skills-list">
-                            <li>
-                                <i class="fas fa-code"></i> Desenvolvimento Web
-                            </li>
-                            <li><i class="fab fa-python"></i> Python</li>
-                            <li><i class="fab fa-java"></i> Java</li>
-                            <li><i class="fab fa-cuttlefish"></i> C</li>
-                            <li><i class="fas fa-code"></i> C++</li>
-                        </ul>
-                    </div>
-                    <div class="skills-column">
-                        <ul class="skills-list">
-                            <li><i class="fas fa-gem"></i> Ruby on Rails</li>
-                            <li><i class="fas fa-database"></i> PostgreSQL</li>
-                            <li><i class="fas fa-fire"></i> Firebase</li>
-                            <li><i class="fab fa-node"></i> Node.js</li>
-                            <li><i class="fab fa-angular"></i> Angular</li>
-                        </ul>
-                    </div>
-                    <div class="skills-column">
-                        <ul class="skills-list">
-                            <li><i class="fab fa-react"></i> React</li>
-                            <li><i class="fas fa-cube"></i> Kubernetes</li>
-                            <li><i class="fab fa-docker"></i> Docker</li>
-                            <li><i class="fab fa-github"></i> GitHub</li>
-                            <li><i class="fab fa-git"></i> Git</li>
-                        </ul>
-                    </div>
+        <main>
+            <section id="hero" class="section">
+                <div class="container">
+                    <h1>Paulo Silvério Martins</h1>
+                    <h2>Desenvolvedor de Software</h2>
+                    <p>
+                        Apaixonado por criar soluções inovadoras e resolver
+                        problemas complexos.
+                    </p>
+                    <a href="#contact" class="btn">Entre em Contato</a>
                 </div>
             </section>
 
-            <section id="soft-skills" class="section">
-                <h3 class="text-center">Soft Skills</h3>
-                <ul class="soft-skills-list">
-                    <li>
-                        <i class="fas fa-check-circle"></i> Comunicação eficaz
-                    </li>
-                    <li>
-                        <i class="fas fa-check-circle"></i> Trabalho em equipe
-                    </li>
-                    <li>
-                        <i class="fas fa-check-circle"></i> Resolução de
-                        problemas
-                    </li>
-                    <li>
-                        <i class="fas fa-check-circle"></i> Pensamento crítico
-                    </li>
-                    <li><i class="fas fa-check-circle"></i> Adaptabilidade</li>
-                    <li><i class="fas fa-check-circle"></i> Liderança</li>
-                </ul>
+            <section id="about" class="section">
+                <div class="container">
+                    <h3>Sobre Mim</h3>
+                    <p>
+                        Minha jornada na computação começou no ensino médio e,
+                        desde então, venho expandindo meus conhecimentos em C/C++,
+                        Python, Java, Node.js, React e Angular. Sou entusiasta
+                        de inteligência artificial e segurança cibernética.
+                    </p>
+                </div>
             </section>
 
-            <section id="languages" class="section">
-                <h3 class="text-center">Idiomas</h3>
-                <div class="languages-grid">
-                    <div class="languages-column">
-                        <h4>Inglês</h4>
-                        <ul class="language-skills-list">
-                            <li>
-                                <i class="fas fa-book"></i> Leitura: Avançado
-                            </li>
-                            <li>
-                                <i class="fas fa-pencil-alt"></i> Escrita:
-                                Intermediário
-                            </li>
-                            <li>
-                                <i class="fas fa-volume-up"></i> Fala:
-                                Intermediário
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="languages-column">
-                        <h4>Espanhol</h4>
-                        <ul class="language-skills-list">
-                            <li>
-                                <i class="fas fa-book"></i> Leitura: Avançado
-                            </li>
-                            <li>
-                                <i class="fas fa-pencil-alt"></i> Escrita:
-                                Intermediário
-                            </li>
-                            <li>
-                                <i class="fas fa-volume-up"></i> Fala:
-                                Intermediário
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="languages-column">
-                        <h4>Italiano</h4>
-                        <ul class="language-skills-list">
-                            <li><i class="fas fa-book"></i> Leitura: Básico</li>
-                            <li>
-                                <i class="fas fa-pencil-alt"></i> Escrita:
-                                Básico
-                            </li>
-                            <li>
-                                <i class="fas fa-volume-up"></i> Fala: Básico
-                            </li>
-                        </ul>
+            <section id="skills" class="section">
+                <div class="container">
+                    <h3>Hard Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item"><i class="fab fa-python"></i> Python</div>
+                        <div class="skill-item"><i class="fab fa-java"></i> Java</div>
+                        <div class="skill-item"><i class="fab fa-react"></i> React</div>
+                        <div class="skill-item"><i class="fab fa-angular"></i> Angular</div>
+                        <div class="skill-item"><i class="fab fa-node-js"></i> Node.js</div>
+                        <div class="skill-item"><i class="fas fa-database"></i> PostgreSQL</div>
+                        <div class="skill-item"><i class="fab fa-docker"></i> Docker</div>
+                        <div class="skill-item"><i class="fab fa-git-alt"></i> Git</div>
                     </div>
                 </div>
             </section>
 
             <section id="featured-projects" class="section">
-                <h3 class="text-center">Projetos em Destaque</h3>
-                <div>
-                    <div>
-                        <strong>Nome do Projeto 1</strong><br />
-                        Descrição breve do projeto em destaque.<br />
-                        Tecnologias utilizadas: Python, Flask, HTML, CSS<br />
-                        <a href="#">Link para o Projeto</a>
-                    </div>
-                    <div>
-                        <strong>Nome do Projeto 2</strong><br />
-                        Descrição breve do projeto em destaque.<br />
-                        Tecnologias utilizadas: React, Node.js, MongoDB<br />
-                        <a href="#">Link para o Projeto</a>
+                <div class="container">
+                    <h3>Projetos em Destaque</h3>
+                    <div class="swiper-container project-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="project-card">
+                                    <h4>Nome do Projeto 1</h4>
+                                    <p>
+                                        Descrição breve do projeto. O objetivo era criar uma API REST para gerenciamento de tarefas.
+                                    </p>
+                                    <p class="project-tech">
+                                        Tecnologias: Python, Flask, PostgreSQL
+                                    </p>
+                                    <a href="#" target="_blank">Ver no GitHub <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="project-card">
+                                    <h4>Nome do Projeto 2</h4>
+                                    <p>
+                                        Descrição breve do projeto. Um dashboard interativo para visualização de dados de vendas.
+                                    </p>
+                                    <p class="project-tech">
+                                        Tecnologias: React, Node.js, D3.js
+                                    </p>
+                                    <a href="#" target="_blank">Ver no GitHub <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                             <div class="swiper-slide">
+                                <div class="project-card">
+                                    <h4>Nome do Projeto 3</h4>
+                                    <p>
+                                        Descrição breve do projeto. Automação de processos utilizando scripts e containers.
+                                    </p>
+                                    <p class="project-tech">
+                                        Tecnologias: Python, Docker, Selenium
+                                    </p>
+                                    <a href="#" target="_blank">Ver no GitHub <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </section>
 
-            <section id="publications" class="section">
-                <h3 class="text-center">Publicações</h3>
-                <ul class="publications-list">
-                    <li>
-                        <strong>Título do Artigo</strong><br />
-                        Nome da Revista/Congresso<br />
-                        Data da Publicação: Janeiro 2023<br />
-                        <a href="#">Link para o Artigo</a>
-                    </li>
-                </ul>
+             <section id="publications" class="section">
+                <div class="container">
+                    <h3>Publicações</h3>
+                    <div class="swiper-container publication-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="publication-card">
+                                    <h4>Título do Artigo 1</h4>
+                                    <p class="publication-venue">Nome da Revista/Congresso (Jan 2023)</p>
+                                    <p>
+                                        Um breve resumo do artigo, destacando sua principal contribuição para a área de estudo.
+                                    </p>
+                                    <a href="#" target="_blank">Ler Artigo <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="publication-card">
+                                    <h4>Título do Artigo 2</h4>
+                                    <p class="publication-venue">Nome da Revista/Congresso (Set 2022)</p>
+                                    <p>
+                                        Um breve resumo do artigo, destacando sua principal contribuição para a área de estudo.
+                                    </p>
+                                    <a href="#" target="_blank">Ler Artigo <i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="swiper-pagination"></div>
+                    </div>
+                </div>
             </section>
 
+
             <section id="contact" class="section">
-                <h3 class="text-center">Contato</h3>
-                <ul class="contact-list">
-                    <li>
-                        <a href="mailto:paulosilvériomartinssilva11@gmail.com"
-                            ><i class="fas fa-envelope"></i
-                        ></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/PSMartins87"
-                            ><i class="fab fa-github"></i
-                        ></a>
-                    </li>
-                    <li>
-                        <a
-                            href="https://www.linkedin.com/in/paulo-silv%C3%A9rio-martins-02b957201/"
-                            ><i class="fab fa-linkedin"></i
-                        ></a>
-                    </li>
-                    <li>
-                        <a href="http://lattes.cnpq.br/0103343467614943"
-                            ><i class="fas fa-graduation-cap"></i
-                        ></a>
-                    </li>
-                </ul>
+                <div class="container">
+                    <h3>Contato</h3>
+                    <p>
+                        Vamos conversar! Sinta-se à vontade para entrar em contato
+                        pelas minhas redes.
+                    </p>
+                    <div class="contact-links">
+                        <a href="mailto:paulosilvériomartinssilva11@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/PSMartins87" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/paulo-silv%C3%A9rio-martins-02b957201/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
             </section>
         </main>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Paulo Silvério Martins. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="script.js"></script>
     </body>
 </html>
