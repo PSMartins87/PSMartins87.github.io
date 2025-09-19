@@ -1,240 +1,287 @@
-body {
-    font-family: Arial, sans-serif;
+/* =============================================
+   1. VARIÁVEIS GLOBAIS E RESET
+   ============================================= */
+
+/* Definindo nossa paleta de cores e fontes como variáveis para fácil manutenção */
+:root {
+    --color-background: #0b0c10;
+    --color-elements: #1f2833;
+    --color-accent: #66fcf1;
+    --color-accent-secondary: #45a29e;
+    --color-text: #c5c6c7;
+    --font-headings: "Poppins", sans-serif;
+    --font-body: "Roboto", sans-serif;
+}
+
+/* Reset básico para remover estilos padrão do navegador */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-text);
     line-height: 1.6;
 }
 
-header {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 2em 0;
-}
-
-/* Estilos para o conteúdo principal */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1em;
-}
-
-.section {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 2em;
-    margin-bottom: 2em;
-    text-align: justify;
-}
-
-.section h3 {
-    color: #000;
-    margin-bottom: 1em;
+h1, h2, h3, h4 {
+    font-family: var(--font-headings);
+    color: var(--color-accent);
+    line-height: 1.2;
 }
 
 a {
-    color: #000;
+    color: var(--color-accent);
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.text-center {
+a:hover {
+    color: var(--color-accent-secondary);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section h3 {
     text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--color-accent);
+    color: var(--color-background);
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: var(--font-headings);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--color-accent-secondary);
+    transform: translateY(-3px);
+}
+
+/* =============================================
+   2. CABEÇALHO E NAVEGAÇÃO
+   ============================================= */
+header {
+    width: 100%;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(11, 12, 16, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: var(--font-headings);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu a {
+    font-size: 1rem;
+    font-weight: 500;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-menu a:hover {
+    border-bottom-color: var(--color-accent);
+}
+
+/* =============================================
+   3. SEÇÃO HERO
+   ============================================= */
+#hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: 4rem;
+}
+
+#hero h2 {
+    font-size: 1.8rem;
+    color: var(--color-text);
+    margin-bottom: 20px;
+}
+
+#hero p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+
+/* =============================================
+   4. SEÇÕES DE CONTEÚDO (SOBRE, SKILLS)
+   ============================================= */
+#about p {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.1rem;
 }
 
 .skills-grid {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.skills-column {
-    width: 30%;
-}
-
-.skills-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.skills-list li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.5em;
-}
-
-.skills-list i {
-    font-size: 1.2rem;
-    margin-right: 0.5em;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.education-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-.education-list li {
-    margin-bottom: 1.5em;
-    border-left: 2px solid #000;
-    padding-left: 1em;
-}
-
-.education-list strong {
-    font-size: 1.2rem;
-    display: block;
-    margin-bottom: 0.3em;
-}
-
-.education-date {
-    color: #666;
-    font-size: 0.9rem;
-}
-
-.soft-skills-list {
-    list-style-type: none;
-    padding: 0;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.soft-skills-list li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.5em;
-}
-
-.soft-skills-list i {
-    font-size: 1.2rem;
-    color: #28a745;
-    margin-right: 0.5em;
-}
-
-.text-center {
+.skill-item {
+    background: var(--color-elements);
+    padding: 20px;
+    border-radius: 8px;
     text-align: center;
-}
-
-.languages-grid {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.languages-column {
-    width: 30%;
-    margin-bottom: 2em;
-}
-
-.language-skills-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.language-skills-list li {
-    margin-bottom: 0.5em;
-    display: flex;
-    align-items: center;
-}
-
-.language-skills-list i {
-    font-size: 1.2rem;
-    margin-right: 0.5em;
-}
-
-.language-skills-list strong {
     font-size: 1.1rem;
-    display: inline-block;
-    margin-right: 0.5em;
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.text-center {
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(102, 252, 241, 0.1);
+}
+
+.skill-item i {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--color-accent);
+}
+
+
+/* =============================================
+   5. SEÇÕES DE CARROSSEL (PROJETOS, PUBLICAÇÕES)
+   ============================================= */
+.swiper-container {
+    width: 100%;
+    padding: 20px 0 50px 0; /* Espaço para a paginação */
+}
+
+.project-card, .publication-card {
+    background: var(--color-elements);
+    padding: 30px;
+    border-radius: 8px;
+    height: 100%;
+    border-left: 3px solid var(--color-accent-secondary);
+}
+
+.project-card h4, .publication-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.project-tech {
+    font-size: 0.9rem;
+    color: var(--color-accent);
+    margin: 15px 0;
+}
+
+/* Estilização da paginação do Swiper */
+.swiper-pagination-bullet {
+    background: var(--color-text);
+    opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--color-accent);
+    opacity: 1;
+}
+
+
+/* =============================================
+   6. CONTATO E RODAPÉ
+   ============================================= */
+#contact {
     text-align: center;
 }
 
-.publications-list {
-    list-style-type: none;
-    padding: 0;
+#contact p {
+    max-width: 500px;
+    margin: 0 auto 30px;
 }
 
-.publications-list li {
-    margin-bottom: 1.5em;
+.contact-links a {
+    font-size: 2.5rem;
+    margin: 0 15px;
 }
 
-.publications-list strong {
-    font-size: 1.1rem;
-    display: block;
-    margin-bottom: 0.3em;
-}
-
-.publications-list a {
-    color: #000;
-    text-decoration: none;
-}
-
-.publications-list a:hover {
-    text-decoration: underline;
-}
-
-.text-center {
+footer {
+    padding: 20px 0;
     text-align: center;
+    background-color: var(--color-elements);
+    margin-top: 60px;
 }
 
-.projects-list {
-    list-style-type: none;
-    padding: 0;
-}
+/* =============================================
+   7. RESPONSIVIDADE
+   ============================================= */
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
 
-.projects-list li {
-    margin-bottom: 1.5em;
-}
+    .section h3 {
+        font-size: 2rem;
+    }
+    
+    #hero h1 {
+        font-size: 2.8rem;
+    }
 
-.projects-list strong {
-    font-size: 1.1rem;
-    display: block;
-    margin-bottom: 0.3em;
-}
+    #hero h2 {
+        font-size: 1.5rem;
+    }
 
-.projects-list a {
-    color: #000;
-    text-decoration: none;
-}
-
-.projects-list a:hover {
-    text-decoration: underline;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.contact-list {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-}
-
-.contact-list li {
-    margin-bottom: 1.5em;
-    font-size: 2rem;
-}
-
-.contact-list a {
-    color: #000;
-    text-decoration: none;
-}
-
-.contact-list a:hover {
-    text-decoration: underline;
-}
-
-.text-center {
-    text-align: center;
+    .nav-menu {
+        /* Em um projeto mais complexo, aqui entraria o código para um menu "hambúrguer" */
+        /* Para este, vamos apenas reduzir o espaçamento */
+        gap: 20px;
+    }
 }
